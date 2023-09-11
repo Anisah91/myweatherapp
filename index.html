@@ -3,15 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Week 6</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Wireframe-Weather</title>
   </head>
   <body>
-    <h1>Week 6 GitHub</h1>
-    <img
-      src="https://www.zbw-mediatalk.eu/wp-content/uploads/2015/09/github-cover.jpg"
-      alt="Githubimg" />
-    <script src="script.js"></script>
+    <div class="container">
+      <div class="weatherapp">
+        <div class="card-body">
+          <div class="cities">
+            <div class="row">
+              <div class="col-2">Los Angeles</div>
+              <div class="col-2">Copenhagen</div>
+              <div class="col-2">Mogadishu</div>
+              <div class="col-2">Rome</div>
+            </div>
+          </div>
+          <br />
+          <form id="search-form">
+            <input
+              type="name"
+              placeholder="Enter your city"
+              autofocus="on"
+              autocomplete="off"
+              id="search-text-input"
+            />
+            <button type="button" class="btn btn-primary">Search</button>
+            <button type="button" class="btn btn-success" id = "currentLocation">Current</button>
+          </form>
+          <br />
+          <p1 id="cityName"></p1>
+
+          <div class="top">
+            <div class="currentday"></div>
+              <span id= "weatherDescription">Sunny</span>   
+        </div> 
+      </br>
+
+           <span id="currentTemp"></span>  
+           <span>℃</span>
+            
+           
+
+          <div class="description">
+            <ul>
+              <li>Feels like: <span id="feelsLike"></span>°C</li>
+              <li>Wind Speed: <span id="wind"></span>km/h</li>
+              <li>Humidity: <span id="humidity"></span></li>
+            </ul>
+          </div>
+
+          <span class="days">
+            <div class="row">
+              <div class="col-2">Sat</div>
+              <div class="col-2">Sun</div>
+              <div class="col-2">Mon</div>
+              <div class="col-2">Tue</div>
+              <div class="col-2">Wed</div>
+            </div>
+          </span>
+
+          <div class="weather">
+            <div class="row">
+              <div class="col-2">🌤️</div>
+              <div class="col-2">☀️</div>
+              <div class="col-2">🌧️</div>
+              <div class="col-2">🌤️</div>
+              <div class="col-2">☀️</div>
+            </div>
+          </div>
+
+          <div class="degrees">
+            <div class="row">
+              <div class="col-2">25°</div>
+              <div class="col-2">29°</div>
+              <div class="col-2">24°</div>
+              <div class="col-2">26°</div>
+              <div class="col-2">28°</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </br>
+
+    <script src="src/script.js"></script>
   </body>
 </html>

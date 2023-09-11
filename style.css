@@ -1,10 +1,80 @@
-h1 {
-  text-align: center;
-  color: blue;
+div.top {
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  width: 900px;
+ul {
+  text-align: right;
+  position: relative;
+  list-style-type: none;
+  color: gray;
+  font-size: 17px;
+  line-height: 1.8em;
+}
+
+span.weatherDescription {
+  color: gray;
+  font-size: 20px;
+  font-weight: bold;
+}
+div.cities {
+  color: blue;
+  margin-top: 40px;
+}
+
+div.cities:hover {
+  text-decoration: underline;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.currentday {
+  color: gray;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.currentTemp {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+span {
+  color: gray;
+  font-size: 18px;
+  font-weight: light;
+}
+
+p1 {
+  font-size: 24px;
+  color: gray;
+  font-weight: bold;
+}
+
+span.days {
+  font-size: 22px;
+  font-weight: bolder;
+  color: grey;
+}
+div.weather {
+  color: grey;
+}
+div.degrees {
+  font-size: 22px;
+  color: grey;
+}
+
+div.weatherapp {
+  border: 2px solid #017bfe;
+  border-radius: 10px;
+}
+
+span.units {
+  position: relative;
+  top: -34px;
+
+  font-size: 1.5rem;
+  font-weight: 400 px;
+  font-family: Arial, Helvetica, sans-serif;
 }
