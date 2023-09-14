@@ -1,7 +1,17 @@
-div.top {
-  font-size: 20px;
-  font-weight: bold;
+p1 {
+  font-size: 30px;
   color: gray;
+  font-weight: bold;
+}
+.top {
+  font-size: 18px;
+  font-weight: lighter;
+  color: gray;
+}
+
+#currentTemp {
+  font-size: 50px;
+  color: #017bfe;
 }
 
 ul {
@@ -9,15 +19,11 @@ ul {
   position: relative;
   list-style-type: none;
   color: gray;
-  font-size: 17px;
+  font-size: 18px;
+  font-weight: lighter;
   line-height: 1.8em;
 }
 
-span.weatherDescription {
-  color: gray;
-  font-size: 20px;
-  font-weight: bold;
-}
 div.cities {
   color: blue;
   margin-top: 40px;
@@ -27,28 +33,6 @@ div.cities:hover {
   text-decoration: underline;
   transition: all 200ms ease-in-out;
   cursor: pointer;
-}
-
-.currentday {
-  color: gray;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.currentTemp {
-  font-weight: bold;
-}
-
-span {
-  color: gray;
-  font-size: 18px;
-  font-weight: light;
-}
-
-p1 {
-  font-size: 24px;
-  color: gray;
-  font-weight: bold;
 }
 
 span.days {
@@ -67,6 +51,8 @@ div.degrees {
 div.weatherapp {
   border: 2px solid #017bfe;
   border-radius: 10px;
+  padding: 20px;
+  width: 75%;
 }
 
 span.units {

@@ -75,9 +75,9 @@ function showTemp(response) {
 }
 
 function searchCity(city) {
-  let apiKey = "8543f1a82410676e3d23debd07622840";
+  let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
   let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=Copenhagen&key=030fafcb8ca878fodcb0b3b2t1a5da45&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
 }
@@ -86,13 +86,13 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 // BonusFeature
 
-function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+function showPosition(coordinates) {
+  let latitude = coordinates.latitude;
+  let longitude = coordinates.longitude;
   let units = "metric";
-  let apiKey = "8543f1a82410676e3d23debd07622840";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showTemp);
+  let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTempere);
 }
 
 function getcurrentPosition(event) {
