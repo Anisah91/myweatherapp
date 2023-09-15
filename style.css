@@ -1,3 +1,15 @@
+#search-text-input {
+  padding: 3px;
+}
+
+.btn-primary {
+  padding: 4px;
+}
+
+.btn-success {
+  padding: 4px;
+}
+
 p1 {
   font-size: 30px;
   color: gray;
@@ -10,8 +22,8 @@ p1 {
 }
 
 #currentTemp {
-  font-size: 50px;
-  color: #017bfe;
+  font-size: 30px;
+  color: gray;
 }
 
 ul {
