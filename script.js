@@ -84,15 +84,12 @@ function searchCity(city) {
 
 navigator.geolocation.getCurrentPosition(showPosition);
 
-// BonusFeature
-
 function showPosition(coordinates) {
-  let latitude = coordinates.latitude;
-  let longitude = coordinates.longitude;
-  let units = "metric";
+  let latitude = coordinates.coords.latitude;
+  let longitude = coordinates.coords.longitude;
   let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTempere);
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.coords.longitude}&lat=${coordinates.coords.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemp);
 }
 
 function getcurrentPosition(event) {
