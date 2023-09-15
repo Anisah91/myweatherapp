@@ -18,7 +18,7 @@ p1 {
 }
 .top {
   font-size: 20px;
-  font-weight: lighter;
+  font-weight: bold;
   color: white;
 }
 
@@ -51,9 +51,8 @@ div.degrees {
 }
 
 div.weatherapp {
-  border: 2px solid #017bfe;
   border-radius: 10px;
-  background-color: #b0cff6;
+  background: linear-gradient(#f6ebe6, #aee1f9);
 }
 
 body {
