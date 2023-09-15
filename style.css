@@ -43,7 +43,7 @@ span.days {
   color: white;
 }
 div.weather {
-  color: grey;
+  color: white;
 }
 div.degrees {
   font-size: 22px;
@@ -53,7 +53,7 @@ div.degrees {
 div.weatherapp {
   border: 2px solid #017bfe;
   border-radius: 10px;
-  background-color: #9bc9f9;
+  background-color: #b0cff6;
 }
 
 body {
