@@ -1,70 +1,66 @@
 #search-text-input {
-  padding: 3px;
+  padding: 3px 120px;
+  line-height: 1.6;
 }
 
 .btn-primary {
-  padding: 4px;
+  padding: 4px 20px;
 }
 
 .btn-success {
-  padding: 4px;
+  padding: 4px 20px;
 }
 
 p1 {
-  font-size: 30px;
-  color: gray;
+  font-size: 40px;
+  color: white;
   font-weight: bold;
 }
 .top {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: lighter;
-  color: gray;
+  color: white;
 }
 
 #currentTemp {
   font-size: 30px;
-  color: gray;
+  color: white;
 }
 
 ul {
   text-align: right;
   position: relative;
   list-style-type: none;
-  color: gray;
+  color: white;
   font-size: 18px;
   font-weight: lighter;
   line-height: 1.8em;
 }
 
-div.cities {
-  color: blue;
-  margin-top: 40px;
-}
-
-div.cities:hover {
-  text-decoration: underline;
-  transition: all 200ms ease-in-out;
-  cursor: pointer;
-}
-
 span.days {
   font-size: 22px;
   font-weight: bolder;
-  color: grey;
+  color: white;
 }
 div.weather {
   color: grey;
 }
 div.degrees {
   font-size: 22px;
-  color: grey;
+  color: white;
 }
 
 div.weatherapp {
   border: 2px solid #017bfe;
   border-radius: 10px;
-  padding: 20px;
-  width: 75%;
+  background-color: #9bc9f9;
+}
+
+body {
+  width: 700px;
+  display: block;
+  margin: 0 auto;
+  padding: -50px 50px;
 }
 
 span.units {
