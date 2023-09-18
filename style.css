@@ -1,14 +1,14 @@
 #search-text-input {
-  padding: 3px 120px;
+  padding: 3px 140px;
   line-height: 1.6;
 }
 
 .btn-primary {
-  padding: 4px 20px;
+  padding: 4px 40px;
 }
 
 .btn-success {
-  padding: 4px 20px;
+  padding: 4px 40px;
 }
 
 p1 {
@@ -20,6 +20,10 @@ p1 {
   font-size: 20px;
   font-weight: lighter;
   color: black;
+}
+
+#weatherDescription {
+  text-transform: capitalize;
 }
 
 #currentTemp {
@@ -67,11 +71,12 @@ div.weatherapp {
   margin: 20px;
   padding-bottom: 2px;
   line-height: 1.2;
+  box-shadow: 5px 5px 5px 5px lightblue;
 }
 
 body {
-  width: 55%;
-  height: 50%;
+  width: 60%;
+  height: 45%;
   display: block;
   margin: 0 auto;
   padding: -50px 50px;
@@ -80,5 +85,5 @@ body {
 small.footer {
   text-align: center;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
 }

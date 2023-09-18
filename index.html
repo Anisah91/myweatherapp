@@ -27,7 +27,7 @@
   <body>
     <div class="container">
       <div class="weatherapp">
-        <div class="card-body">    
+        <div class="card-body"> 
           <div class="cities">
             <div class="row">
               
@@ -35,30 +35,34 @@
           </div>
         </br>
           <form id="search-form">
+      
             <input
-              type="name"
+              type="text"
               placeholder="Enter your city"
               autofocus="on"
               autocomplete="off"
               id="search-text-input"
+              onclick ()
             />
             <button type="button" class="btn btn-primary">Search</button>
+            
             <button type="button" class="btn btn-success" id = "currentLocation">Current</button>
           </form>
         </br>
         </br>
-          
-
           <p1 id="cityName"></p1>
           <br />
+          
+          <div class="top">
+        </br>
+
+            <span class="currentday"></span>
+          <br />
           <br />
 
-
-          <div class="top">
-            <span class="currentday"></span>
               <div id= "weatherDescription">Sunny</div>     
         </div> 
-
+        
      <div class= "weatherTemp">
         <img src="" id="icon">
         <span id= "currentTemp">℃</span> 
@@ -73,19 +77,15 @@
               <li>Wind Speed: <span id="wind"></span>km/h</li>
               <li>Humidity: <span id="humidity"></span></li>
             </ul>
-          </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    
-
+          </div>     
     </div>
+    </div>
+
     <small class="footer"><a href="https://github.com/Anisah91/myweatherapp" target="_blank">Open-source code</a>, by Anisa Mohamud</small>
 
     <script src="script.js"></script>
 
   </body>
+  
   
 </html>

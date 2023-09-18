@@ -47,7 +47,9 @@ myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
 
 function search(event) {
   event.preventDefault();
+
   cityElement.innerHTML = `${searchInput.value}`;
+
   searchCity(searchInput.value);
 }
 
@@ -78,7 +80,7 @@ function showTemp(response) {
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.condition.description.toUpperCase();
+    response.data.condition.description;
 }
 
 function searchCity(city) {
