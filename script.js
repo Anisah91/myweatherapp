@@ -55,6 +55,8 @@ let cityElement = document.querySelector("#cityName");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+let searchButton = document.querySelector("btn-primary");
+form.addEventListener("click", search);
 
 function showTemp(response) {
   console.log(response.data);

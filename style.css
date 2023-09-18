@@ -42,27 +42,10 @@ ul {
   position: relative;
   list-style-type: none;
   color: black;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: lighter;
   line-height: 1.8em;
   font: Arial, sans-serif;
-}
-
-span.days {
-  font-size: 22px;
-  font-weight: bolder;
-  color: black;
-  text-align: center;
-}
-div.weather {
-  color: black;
-  font-size: 30px;
-  text-align: center;
-}
-div.degrees {
-  font-size: 22px;
-  color: black;
-  text-align: center;
 }
 
 div.weatherapp {
@@ -74,20 +57,11 @@ div.weatherapp {
 }
 
 body {
-  width: 50%;
+  width: 55%;
   height: 50%;
   display: block;
   margin: 0 auto;
   padding: -50px 50px;
-}
-
-span.units {
-  position: relative;
-  top: -34px;
-
-  font-size: 1.5rem;
-  font-weight: 400 px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 small.footer {
