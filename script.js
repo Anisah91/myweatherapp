@@ -57,9 +57,14 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemp(response) {
+  console.log(response.data);
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
+  let iconElement = document
+    .querySelector("#icon")
+    .setAttribute("src", `${response.data.condition.icon_url}`);
+
   currentcityName.innerHTML = response.data.city;
   document.querySelector("#feelsLike").innerHTML = Math.round(
     response.data.temperature.feels_like

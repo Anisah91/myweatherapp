@@ -25,6 +25,11 @@ p1 {
 #currentTemp {
   font-size: 60px;
   color: black;
+  vertical-align: middle;
+}
+
+img {
+  text-align: left;
 }
 
 ul {
@@ -58,7 +63,9 @@ div.degrees {
 div.weatherapp {
   border-radius: 10px;
   background: linear-gradient(#f6ebe6, #aee1f9);
-  height: 100%;
+  margin: 20px;
+  padding-bottom: 2px;
+  line-height: 1.2;
 }
 
 body {
