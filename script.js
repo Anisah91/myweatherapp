@@ -50,6 +50,7 @@ function search(event) {
   cityElement.innerHTML = `${searchInput.value}`;
   searchCity(searchInput.value);
 }
+
 let searchInput = document.querySelector("#search-text-input");
 let cityElement = document.querySelector("#cityName");
 
@@ -59,14 +60,13 @@ let searchButton = document.querySelector("btn-primary");
 form.addEventListener("click", search);
 
 function showTemp(response) {
-  console.log(response.data);
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
   let iconElement = document
     .querySelector("#icon")
     .setAttribute("src", `${response.data.condition.icon_url}`);
-
+  celsiusTemp = response.data.temperature.current;
   currentcityName.innerHTML = response.data.city;
   document.querySelector("#feelsLike").innerHTML = Math.round(
     response.data.temperature.feels_like
@@ -78,7 +78,7 @@ function showTemp(response) {
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.condition.description;
+    response.data.condition.description.toUpperCase();
 }
 
 function searchCity(city) {
@@ -106,4 +106,29 @@ function getcurrentPosition(event) {
 
 let button = document.querySelector("#currentLocation");
 button.addEventListener("click", getcurrentPosition);
+
+function displayFahrenheit(event) {
+  event.preventDefault();
+
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#currentTemp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemp");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+let celsiusTemp = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsius);
+
 searchCity("Copenhagen");

@@ -27,10 +27,23 @@ p1 {
   color: black;
   vertical-align: middle;
 }
-.currentUnit {
+.units {
   font-size: 20px;
-  color: black;
   vertical-align: top;
+}
+
+#celsius-link.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+#fahrenheit-link.active {
+  text-decoration: none;
+  color: black;
+  cursor: default;
+}
+.active hover {
+  text-decoration: none;
 }
 
 img {
