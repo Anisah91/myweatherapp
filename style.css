@@ -13,50 +13,57 @@
 
 p1 {
   font-size: 40px;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 .top {
   font-size: 20px;
-  font-weight: bold;
-  color: white;
+  font-weight: lighter;
+  color: black;
 }
 
 #currentTemp {
-  font-size: 30px;
-  color: white;
+  font-size: 60px;
+  color: black;
 }
 
 ul {
   text-align: right;
   position: relative;
   list-style-type: none;
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: 22px;
   font-weight: lighter;
   line-height: 1.8em;
+  font: Arial, sans-serif;
 }
 
 span.days {
   font-size: 22px;
   font-weight: bolder;
-  color: white;
+  color: black;
+  text-align: center;
 }
 div.weather {
-  color: white;
+  color: black;
+  font-size: 30px;
+  text-align: center;
 }
 div.degrees {
   font-size: 22px;
-  color: white;
+  color: black;
+  text-align: center;
 }
 
 div.weatherapp {
   border-radius: 10px;
   background: linear-gradient(#f6ebe6, #aee1f9);
+  height: 100%;
 }
 
 body {
-  width: 700px;
+  width: 50%;
+  height: 50%;
   display: block;
   margin: 0 auto;
   padding: -50px 50px;

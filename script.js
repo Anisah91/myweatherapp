@@ -1,4 +1,3 @@
-// In your project, when a user searches for a city (example: New York), it should display the name of the city on the result page and the current temperature of the city.
 let currentdate = new Date();
 
 const myElement = document.querySelector(".top .currentday");
@@ -59,25 +58,26 @@ form.addEventListener("submit", search);
 
 function showTemp(response) {
   let currentTemp = document.querySelector("#currentTemp");
-  currentTemp.innerHTML = Math.round(response.data.main.temp);
+  currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
-  currentcityName.innerHTML = response.data.name;
+  currentcityName.innerHTML = response.data.city;
   document.querySelector("#feelsLike").innerHTML = Math.round(
-    response.data.main.feels_like
+    response.data.temperature.feels_like
   );
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
   document.querySelector("#weatherDescription").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
 }
 
 function searchCity(city) {
   let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
   let units = "metric";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=Copenhagen&key=030fafcb8ca878fodcb0b3b2t1a5da45&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=030fafcb8ca878fodcb0b3b2t1a5da45&units=metric`;
 
   axios.get(apiUrl).then(showTemp);
 }
