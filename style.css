@@ -50,10 +50,6 @@ p1 {
   text-decoration: none;
 }
 
-img {
-  text-align: left;
-}
-
 ul {
   text-align: right;
   position: relative;
@@ -73,10 +69,30 @@ div.weatherapp {
   line-height: 1.2;
   box-shadow: 5px 5px 5px 5px lightblue;
 }
+.weather-forecast {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 20px;
+}
+.img-container {
+  text-align: center;
+}
+
+.wf-min {
+  font-size: 20px;
+}
+.wf-max {
+  font-size: 20px;
+}
 
 body {
-  width: 60%;
-  height: 45%;
+  width: 65%;
+  height: 55%;
+  background-color: aliceblue;
   display: block;
   margin: 0 auto;
   padding: -50px 50px;
