@@ -62,7 +62,6 @@ let searchButton = document.querySelector("btn-primary");
 form.addEventListener("click", search);
 
 function showTemp(response) {
-  console.log(response);
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
