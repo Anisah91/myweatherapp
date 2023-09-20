@@ -62,8 +62,8 @@ function displayForecast() {
         <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="weather-emoji" width="30px"/>
       </div>
       <div class="weather-forecast-temp">
-        <span class="wf-min">17°|</span>
-        <span class="wf-max">19°</span>
+        <span class="wf-max">17° | </span>
+        <span class="wf-min">19°</span>
       </div>
       </div>`;
   });

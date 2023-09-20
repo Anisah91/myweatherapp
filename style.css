@@ -69,21 +69,21 @@ div.weatherapp {
   line-height: 1.2;
   box-shadow: 5px 5px 5px 5px lightblue;
 }
-.weather-forecast {
-  margin: 0 auto;
+#forecast {
   display: block;
-  text-align: center;
+  margin: 0 auto;
 }
 
 .weather-forecast-day {
   font-size: 20px;
+  text-align: center;
 }
 .img-container {
   text-align: center;
 }
 
 .wf-min {
-  font-size: 20px;
+  font-size: 16px;
 }
 .wf-max {
   font-size: 20px;
