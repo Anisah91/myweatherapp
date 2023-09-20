@@ -45,6 +45,33 @@ let month = months[currentdate.getMonth()];
 
 myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class = "row">`;
+  let days = ["Wednesday", "Thursday", "Friday", "Saturday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+    <div class="col-2">
+      <div class="weather-forecast-day">
+        ${day}
+      </div>
+      <div class="img-container">
+        <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="weather-emoji" width="30px"/>
+      </div>
+      <div class="weather-forecast-temp">
+        <span class="wf-min">17°|</span>
+        <span class="wf-max">19°</span>
+      </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
 function search(event) {
   event.preventDefault();
 
@@ -127,6 +154,7 @@ function displayCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 let celsiusTemp = null;
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheit);
 
@@ -134,3 +162,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Copenhagen");
+displayForecast();
