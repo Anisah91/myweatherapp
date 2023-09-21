@@ -120,7 +120,7 @@ function showTemp(response) {
   document.querySelector("#weatherDescription").innerHTML =
     response.data.condition.description;
 
-  getForecast(coords);
+  getForecast(response.coordinates);
 }
 
 function searchCity(city) {
