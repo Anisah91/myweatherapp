@@ -45,7 +45,8 @@ let month = months[currentdate.getMonth()];
 
 myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
@@ -70,7 +71,6 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 function search(event) {
   event.preventDefault();
@@ -88,7 +88,18 @@ form.addEventListener("submit", search);
 let searchButton = document.querySelector("btn-primary");
 form.addEventListener("click", search);
 
+function getForecast(coordinates) {
+  let latitude = coordinates.coords.latitude;
+  let longitude = coordinates.coords.longitude;
+  let units = "metric";
+  let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${coordinates.coords.latitude}&lon=${coordinates.coords.longitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemp(response) {
+  console.log(response.data);
+
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
@@ -108,6 +119,8 @@ function showTemp(response) {
     response.data.temperature.humidity;
   document.querySelector("#weatherDescription").innerHTML =
     response.data.condition.description;
+
+  getForecast(coords);
 }
 
 function searchCity(city) {
@@ -162,4 +175,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Copenhagen");
-displayForecast();
