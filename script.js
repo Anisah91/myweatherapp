@@ -46,7 +46,6 @@ let month = months[currentdate.getMonth()];
 myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
 
 function displayForecast(response) {
-  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
@@ -56,14 +55,13 @@ function displayForecast(response) {
       forecastHTML +
       ` 
     <div class="col-2">
-      <div class="weather-forecast-day">
-        ${day}
-      </div>
+      <div class="weather-forecast-day">${day}</div>
       <div class="img-container">
-        <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="weather-emoji" width="30px"/>
-      </div>
+        <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" 
+        alt="weather-emoji"
+         width="30px"/> </div>
       <div class="weather-forecast-temp">
-        <span class="wf-max">17° | </span>
+        <span class="wf-max">17°</span>
         <span class="wf-min">19°</span>
       </div>
       </div>`;
@@ -120,7 +118,7 @@ function showTemp(response) {
   document.querySelector("#weatherDescription").innerHTML =
     response.data.condition.description;
 
-  getForecast(response.coordinates);
+  getForecast(coordinates);
 }
 
 function searchCity(city) {
