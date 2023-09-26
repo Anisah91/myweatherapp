@@ -68,15 +68,15 @@ function displayForecast(response) {
       <div class="img-container">
         <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
           forecastDay.condition.icon
-        }.png" alt="weather-emoji" width="30px"/>
+        }.png" alt="weather-emoji" width="80px"/>
       </div>
       <div class="weather-forecast-temp">
         <span class="wf-max">${Math.round(
           forecastDay.temperature.maximum
-        )}°</span>
+        )}° / </span>
         <span class="wf-min">${Math.round(
           forecastDay.temperature.minimum
-        )}°</span>
+        )}° </span>
       </div>
       </div>`;
     }

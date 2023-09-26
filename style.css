@@ -82,18 +82,19 @@ div.weatherapp {
 .img-container {
   text-align: center;
   padding: 20px;
+  size: 100px;
 }
 
 .wf-min {
-  font-size: 17px;
+  font-size: 22px;
+  color: grey;
 }
 .wf-max {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;
 }
 .weather-forecast-temp {
   text-align: center;
-  padding: 5px;
+  padding: 2px;
 }
 
 body {
