@@ -75,18 +75,24 @@ div.weatherapp {
 }
 
 .weather-forecast-day {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  line-height: 1.5em;
 }
 .img-container {
   text-align: center;
+  padding: 20px;
 }
 
 .wf-min {
-  font-size: 16px;
+  font-size: 18px;
 }
 .wf-max {
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.weather-forecast-temp {
+  text-align: center;
 }
 
 body {
