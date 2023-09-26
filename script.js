@@ -45,7 +45,8 @@ let month = months[currentdate.getMonth()];
 
 myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
@@ -69,9 +70,17 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-function showTemp(response) {
-  console.log(response.data);
 
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let latitude = coordinates.latitude;
+  let longitude = coordinates.longitude;
+  let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
+function showTemp(response) {
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let currentcityName = document.querySelector("#cityName");
@@ -91,6 +100,8 @@ function showTemp(response) {
     response.data.temperature.humidity;
   document.querySelector("#weatherDescription").innerHTML =
     response.data.condition.description;
+
+  getForecast(response.data.coordinates);
 }
 function search(event) {
   event.preventDefault();
@@ -107,14 +118,6 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 let searchButton = document.querySelector("btn-primary");
 form.addEventListener("click", search);
-
-function getForecast(coordinates) {
-  let latitude = coordinates.latitude;
-  let longitude = coordinates.longitude;
-  let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lat=${latitude}&lon=${longitude}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}
 
 function searchCity(city) {
   let apiKey = "030fafcb8ca878fodcb0b3b2t1a5da45";
@@ -168,4 +171,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsius);
 
 searchCity("Copenhagen");
-displayForecast();

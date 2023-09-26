@@ -85,7 +85,7 @@ div.weatherapp {
 }
 
 .wf-min {
-  font-size: 18px;
+  font-size: 17px;
 }
 .wf-max {
   font-size: 18px;
@@ -93,6 +93,7 @@ div.weatherapp {
 }
 .weather-forecast-temp {
   text-align: center;
+  padding: 5px;
 }
 
 body {
@@ -107,5 +108,5 @@ body {
 small.footer {
   text-align: center;
   display: block;
-  font-size: 16px;
+  font-size: 14px;
 }
