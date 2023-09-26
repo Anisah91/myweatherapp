@@ -44,27 +44,42 @@ let months = [
 let month = months[currentdate.getMonth()];
 
 myElement.innerHTML = `${days[currentdate.getDay()]} ${hours}:${minutes}`;
-
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[day];
+}
 function displayForecast(response) {
   console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class = "row">`;
-  let days = ["Wednesday", "Thursday", "Friday", "Saturday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      ` 
+  days = ["Wednesday", "Thursday", "Friday", "Saturday"];
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        ` 
     <div class="col-2">
-      <div class="weather-forecast-day">${day}</div>
+      <div class="weather-forecast-day">${formatDay(forecastDay.time)}</div>
       <div class="img-container">
-        <img src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="weather-emoji" width="30px"/>
+        <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+          forecastDay.condition.icon
+        }.png" alt="weather-emoji" width="30px"/>
       </div>
       <div class="weather-forecast-temp">
-        <span class="wf-max">17°</span>
-        <span class="wf-min">19°</span>
+        <span class="wf-max">${Math.round(
+          forecastDay.temperature.maximum
+        )}°</span>
+        <span class="wf-min">${Math.round(
+          forecastDay.temperature.minimum
+        )}°</span>
       </div>
       </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
