@@ -16,7 +16,7 @@
 }
 
 p1 {
-  font-size: 42px;
+  font-size: 40px;
   color: black;
   font-weight: bold;
 }
@@ -31,27 +31,13 @@ p1 {
 }
 
 #currentTemp {
-  font-size: 80px;
+  font-size: 75px;
   color: black;
   vertical-align: middle;
 }
 .units {
-  font-size: 20px;
+  font-size: 24px;
   vertical-align: top;
-}
-
-#celsius-link.active {
-  text-decoration: none;
-  color: black;
-  cursor: default;
-}
-#fahrenheit-link.active {
-  text-decoration: none;
-  color: black;
-  cursor: default;
-}
-.active hover {
-  text-decoration: none;
 }
 
 ul {
@@ -69,14 +55,14 @@ ul {
   right: -550px;
   top: -160px;
   box-shadow: 4px 4px 4px 4px lightblue;
-  padding: 5px;
+  padding: 0.5px;
   text-align: center;
 }
 
 div.weatherapp {
   border-radius: 10px;
   background: linear-gradient(#f6ebe6, #aee1f9);
-  margin: 15px;
+  margin: 13px;
   padding-bottom: 1px;
   line-height: 1.1;
   box-shadow: 5px 5px 5px 5px lightblue;
@@ -89,7 +75,7 @@ div.weatherapp {
 .weather-forecast-day {
   font-size: 20px;
   text-align: center;
-  line-height: 1em;
+  line-height: 0.7em;
 }
 .img-container {
   text-align: center;
