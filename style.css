@@ -11,13 +11,17 @@
   padding: 4px 40px;
 }
 
+.container {
+  max-width: 65%;
+}
+
 p1 {
   font-size: 40px;
   color: black;
   font-weight: bold;
 }
 .top {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: lighter;
   color: black;
 }
@@ -27,7 +31,7 @@ p1 {
 }
 
 #currentTemp {
-  font-size: 70px;
+  font-size: 80px;
   color: black;
   vertical-align: middle;
 }
@@ -51,14 +55,20 @@ p1 {
 }
 
 ul {
-  text-align: right;
-  position: relative;
   list-style-type: none;
   color: black;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: lighter;
-  line-height: 1.8em;
+  line-height: 1.6em;
   font: Arial, sans-serif;
+  border: 0.5px solid gray;
+  width: 280px;
+  height: 130px;
+  border-radius: 8px;
+  position: relative;
+  right: -550px;
+  top: -160px;
+  box-shadow: 4px 4px 4px 4px lightblue;
 }
 
 div.weatherapp {
@@ -77,11 +87,11 @@ div.weatherapp {
 .weather-forecast-day {
   font-size: 18px;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1em;
 }
 .img-container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   size: 100px;
 }
 
@@ -94,20 +104,16 @@ div.weatherapp {
 }
 .weather-forecast-temp {
   text-align: center;
-  padding: 2px;
 }
 
 body {
-  width: 65%;
-  height: 55%;
   background-color: aliceblue;
   display: block;
   margin: 0 auto;
-  padding: -50px 50px;
 }
 
 small.footer {
   text-align: center;
   display: block;
-  font-size: 14px;
+  font-size: 16px;
 }
