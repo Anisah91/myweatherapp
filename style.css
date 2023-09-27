@@ -54,7 +54,7 @@ ul {
   border-radius: 8px;
   position: relative;
   right: -550px;
-  top: -160px;
+  top: -120px;
   box-shadow: 4px 4px 4px 4px lightblue;
   padding: 0.5px;
   text-align: center;
@@ -81,7 +81,7 @@ div.weatherapp {
 .img-container {
   text-align: center;
   padding: 10px;
-  size: 100px;
+  size: 120px;
 }
 
 .wf-min {
