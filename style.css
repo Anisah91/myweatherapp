@@ -16,7 +16,7 @@
 }
 
 p1 {
-  font-size: 40px;
+  font-size: 42px;
   color: black;
   font-weight: bold;
 }
@@ -57,26 +57,28 @@ p1 {
 ul {
   list-style-type: none;
   color: black;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: lighter;
   line-height: 1.6em;
   font: Arial, sans-serif;
   border: 0.5px solid gray;
-  width: 280px;
-  height: 130px;
+  width: 290px;
+  height: 145px;
   border-radius: 8px;
   position: relative;
   right: -550px;
   top: -160px;
   box-shadow: 4px 4px 4px 4px lightblue;
+  padding: 5px;
+  text-align: center;
 }
 
 div.weatherapp {
   border-radius: 10px;
   background: linear-gradient(#f6ebe6, #aee1f9);
-  margin: 20px;
-  padding-bottom: 2px;
-  line-height: 1.2;
+  margin: 15px;
+  padding-bottom: 1px;
+  line-height: 1.1;
   box-shadow: 5px 5px 5px 5px lightblue;
 }
 #forecast {
@@ -85,7 +87,7 @@ div.weatherapp {
 }
 
 .weather-forecast-day {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   line-height: 1em;
 }
@@ -115,5 +117,5 @@ body {
 small.footer {
   text-align: center;
   display: block;
-  font-size: 16px;
+  font-size: 15px;
 }
